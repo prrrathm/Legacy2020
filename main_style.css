@@ -1,0 +1,292 @@
+html{
+    scroll-behaviour: smooth;
+  }
+  body{
+    margin: 0;
+    color: #102030;
+    background-color: #101010;  
+    font-family: 'Oswald',sans-serif;
+    font-size: 60px;
+    overflow: hidden;
+  }
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+  h1, h2, p{
+    margin: 0;
+    padding: 0;
+  }
+  .not{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #101010;
+    z-index: 20;
+    color: #eeee70;
+    text-align: center;
+    font-size: 150%;
+    padding-top: 40vh;
+  }
+  .parts{
+    min-height: 100vh;	
+    width: 100%;
+    z-index: 1;
+  }
+  .nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 200px 20px 10px 20px;
+    z-index: 10;
+    color: #f8f8ff;
+    background-color: rgba(10, 10, 10, 0.8);
+    font-size: 160%;
+    border-radius: 10px;
+    clip-path: circle(0% at 80% 5%);
+    transition: 100ms;
+    list-style-type: none;
+  }
+  .nav-full{
+    clip-path: circle(75%);
+  }
+  .nav li{
+    text-align: center;
+    margin: 20px 0px;
+  }
+  #nav-down-button{
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    height: 8vh;
+    right: 0;
+    margin: 30px;
+    top: 0;
+    padding: 10px;
+    z-index: 11;
+    background-color: lightcoral;
+  }
+  .nav a{
+    display: block;
+    margin: 5px;
+    font-size:200%;
+    transition: 100ms;
+  }
+  .nav a:hover{
+    color: yellow;
+    font-size: 220%;
+  }
+  .box{
+    width: 70%;
+    flex-shrink: 0;
+    min-height: 50vh;
+    background-color: #e9ed07;
+    color: #333447;
+    scroll-behavior: smooth;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .box h2{
+    color: #241717;
+  }
+  .box ol{
+    margin: 10px;
+  }
+  #time{
+    height: 40vh;
+    width: 100%;
+    font-size: 300%;
+    text-align: center;
+    padding: 15vh 20px 20px 10px;
+    background: linear-gradient(rgba(200, 100, 100, 0.5), rgba(10, 10, 10, 0.4)), url('https://i.pinimg.com/564x/1f/5f/c0/1f5fc0c39032966acd1736f005cd8842.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #footer{
+    position: absolute;
+    background-color: #101010;
+    color: #eaa;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 68px;
+    text-align: center;
+  }
+  @media screen and (max-width: 1000px){
+    html{
+      margin: 0;
+      padding: 0;
+    }
+    .not{
+      display:none;	
+    }
+    body{
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      width: 100%;
+      padding-right: 0;
+      font-size: 45px;
+    }
+    #time{
+      padding: 15vh 60px 20px 10px;
+     }
+    .parts{
+      font-size: 130%;
+        margin: 0;
+        z-index: 1;
+    }
+    .nav{
+      margin: 0;
+      height: 100vh;
+      width: 100%;
+    }
+    #one{
+      background: linear-gradient(rgba(200, 100, 100, 0.5), rgba(10, 10, 10, 0.4)), url('https://i.pinimg.com/originals/9a/09/85/9a0985904bf1cca3be1a90010fa81ff1.gif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #eee;
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+      padding: 20px 60px 20px 20px;
+    }
+    #logo{
+      position: relative;
+      top: 15vh;
+      font-size: 500%;
+      letter-spacing: 5px;
+      text-align: center;
+      text-shadow: 10px 4.5px #906060;
+      z-index: 2;
+    }
+    #logo::before{
+      content: 'Volume #2';
+      position: absolute;
+      top: 80%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      color: #05b094;
+      font-family: 'Pacifico', cursive;
+      font-size: 30%;
+      text-shadow: 1px 1px #303030;
+    }
+    #logo::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 45px;
+      bottom: 0;
+      height: 90%;
+      width: 40%;
+      background-color: #eaa;
+      z-index: -1;
+    }
+    #two{
+      background-color: #eaa;
+      position: relative;
+      max-height: 100vh;
+      padding: 20px 60px 20px 20px;
+    }
+    #two img{
+      position: absolute; 
+      height: 65vh;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    #two p{
+      position: relative;
+      z-index: 2;
+    }
+    #three{ 
+      position: relative; 
+      padding: 300px 60px 20px 20px;
+      height: 100vh;
+      background-color: #eaa;
+    }
+    #three-part-1, #contacts{
+      position: relative;
+      display: flex;
+      margin: 10px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;  
+      z-index: 2;
+    }
+    .box{
+      width: 80%;
+      flex-shrink: 0;
+      min-height: 60vh;
+      background-color: #05b094;
+      color: #333447;
+      scroll-behavior: smooth;
+      padding: 45px;
+      margin: 22.5px;
+      border-radius: 22.5px;
+      overflow: hidden; 
+      border: 4.5px solid #333447;
+    }
+    .box h2{
+      color: #241717;
+    }
+    .box ol{
+      margin: 4.5px;
+    }
+    #three h1, #four h1{
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      font-size: 300%;
+      color: #401010;
+      text-align: center;
+      z-index: 3;
+      font-weight: 900;
+    }
+    #three img, #four img{
+      position: absolute; 
+      height: 65vh;
+      bottom: 0;
+      z-index: 1;
+    }
+    #three img{
+      left: 0;
+    }
+    #four img{
+      right: 0;   
+      height: 58vh;
+    }
+    #four{
+      position: relative;
+      padding: 350px 60px 60px 20px;
+      background: linear-gradient(rgba(200, 100, 100, 0.5), rgba(10, 10, 10, 0.4)), url('https://i.pinimg.com/564x/94/c9/da/94c9da1132cfb3502112b3d66d365465.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;  }
+    #form-link{
+      position: relative;
+      color: #101010;
+      background-color: #e9ed07;
+      font-size: 220%;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+    #contacts{
+      margin: 60px 20px;
+    }
+    #contacts .box{
+      background-color: rgba(200, 100, 100, 0.6);
+      border: 4.5px solid #906060;
+      min-height: 40vh;
+      width: 60%;
+    }
+  }
